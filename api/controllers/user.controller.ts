@@ -1,8 +1,8 @@
-import { Request, Response } from 'express'
-
+import { NextFunction, Request, Response } from 'express';
+import bcryptjs from 'bcryptjs';
 // DB
 import { connect } from '../database'
-// Interfaces
+// Interfaces 
 import { User } from '../interfaces/user.interface'
 
 export async function getUsers(req: Request, res: Response): Promise<Response | void> {
